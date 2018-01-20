@@ -9,7 +9,7 @@ spamd: spamd.o
 	$(CXX) $(CXXFLAGS) $(MYFLAGS) $^ -o $@ ${LIBS}
 
 install: spamd
-	install -D spamd /opt/spamd/spamd
+	install -D spamd $(DESTDIR)/opt/spamd/spamd
 
 %.o: %.cpp  $(DEPDIR)/%.d
 	$(CXX) $(CXXFLAGS) -c $< -o $@ 
